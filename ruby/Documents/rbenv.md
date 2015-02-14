@@ -136,13 +136,14 @@ testApp内で利用されるgemsはtestApp/.gemsディレクトリ内のgemsに�
 >.gems global  
   
 #### bundlerを利用したgem管理
-** bundlerをインストール **
+
+**bundlerをインストール**
 >$ rbenv exec gem install bundler  
 >$ rbenv rehash  
 >$ rbenv exec bundle init  
 >Writing new Gemfile to /Users/User/Develop/Work/testApp/Gemfile  
-  
-** 利用するgemをGemfileに設定 **  
+
+**利用するgemをGemfileに設定**  
 >$ vim Gemfile   
 >¥# A sample Gemfile  
 >source "https://rubygems.org"  
@@ -151,7 +152,7 @@ testApp内で利用されるgemsはtestApp/.gemsディレクトリ内のgemsに�
 >gem "rails", "4.1.8"  
 >gem "pry"  
   
-** bundle installでGemfileに設定したgemをインストール **  
+**bundle installでGemfileに設定したgemをインストール**  
 >$ rbenv exec bundle install  
 >...  
 >Installing rake 10.4.2  
