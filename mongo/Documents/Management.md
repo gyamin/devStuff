@@ -1,4 +1,4 @@
-# ユーザ追加
+## ユーザ追加
 
 ### adminユーザの作成
 mongodbではadminデータベースにユーザを追加することで、adminユーザを作成することができる。
@@ -95,7 +95,36 @@ db.dropUser("userName")
 true
 ```
 
-# OS Xからのサーバへの接続
+### データベースの作成
+
+MongoDBに接続後`use dbname`で利用するデータベースを決定できる。新しいデータベースを作りたい場合は、`use [New DB Name]`を実行する。
+```
+> use sample_express
+switched to db sample_express
+```
+
+### コレクションの作成
+`db.createCollection('Collection Name');`
+```
+> db.createCollection('manage_user');
+{ "ok" : 1 }
+```
+
+### コレクション一覧
+```
+> show collections;
+manage_user
+system.indexes
+```
+
+### コレクションの削除
+`db.collection_name.drop()`
+```
+> db.manage_user.drop();
+true
+```
+
+## OS Xからのサーバへの接続
 
 ### mongoのインストール
 ```
